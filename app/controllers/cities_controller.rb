@@ -24,9 +24,7 @@ class CitiesController < ApplicationController
     @city = City.new(city_params)
 
     respond_to do |format|
-      # if @city.save
-      # Make create_city_spec fail
-      if true
+      if @city.save
         format.html { redirect_to city_url(@city), notice: "City was successfully created." }
         format.json { render :show, status: :created, location: @city }
       else
