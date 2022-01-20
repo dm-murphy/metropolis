@@ -49,7 +49,7 @@ class CitiesController < ApplicationController
 
   # DELETE /cities/1 or /cities/1.json
   def destroy
-    # @city.destroy
+    @city.destroy
 
     respond_to do |format|
       format.html { redirect_to cities_url, notice: "City was successfully destroyed." }
